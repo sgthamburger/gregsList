@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+    <title>Document</title>
+    <div><img src="/assets/header.jpg" alt="GregsList" style="width:50%" class="center"></div>
+
+  </head>
+  
+  <body>
+    <div class="container">
+      <div class="row">
+      <div class="col" id="car-column" style="display: block">
+    <button class="btn btn-primary btn-lg" onclick="app.carsController.getCars()"><h2>Cars</h2></button>
+    <form style="display: none" id="car-form" onsubmit="app.carsController.createCar()">
+      <input name="_id" type="text" class="d-none" disabled />
+      <div class="form-group">
+        <label for="Make">Make:</label>
+        <input name="Make" type="text" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="Model">Model:</label>
+        <input name="Model" type="text" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="Year">Year:</label>
+        <input name="Year" type="text" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="Price">Price:</label>
+        <input name="Price" type="text" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="Description">Description:</label>
+        <textarea
+          name="Description"
+          type="text"
+          class="form-control"
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <label for="ImageURL">Image URL:</label>
+        <input name="ImageURL" type="text" class="form-control" />
+      </div>
+      <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+    </form>
+  </div>
+    <div class="col">
+    <div id="cars" class="card-group" style="display:block; width: 100%;"></div>
+    <div class="container">
+    <div class="row">
+      <div class="col">
+    <button class="btn btn-primary btn-lg" onclick="app.housesController.getHouses()"><h2>Houses</h2></button>
+    <form style="display: none" id="house-form" onsubmit="app.housesController.createHouse()">
+      <input name="_id" type="text" class="d-none" disabled />
+      <div class="form-group">
+        <label for="bedrooms">Bedrooms:</label>
+        <input name="bedrooms" type="text" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="bathrooms">Bathrooms:</label>
+        <input name="bathrooms" type="text" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="levels">Levels:</label>
+        <input name="levels" type="text" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="year">Year:</label>
+        <input name="year" type="text" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="price">Price: $</label>
+        <input name="price" type="text" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea
+          name="description"
+          type="text"
+          class="form-control"
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <label for="imgUrl">Image:</label>
+        <input name="imgUrl" type="text" class="form-control" />
+      </div>
+      <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+    </form>
+    <div class="col">
+    <div id="houses" class="card-group" style="display:block; width: 100%;"></div>
+  </div>
+
+    <script src="app/main.js" type="module"></script>
+  </body>
+</html>
