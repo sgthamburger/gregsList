@@ -28,13 +28,19 @@ export default class HousesController {
     } else {
    console.log("trying to show/hide house form");   
   } 
+  let c = document.getElementById("houses");
+    if (c.style.display == "none") {
+   c.style.display = "block";
+    } else {
+   console.log("trying to show/hide houses");   
+  } 
   let h = document.getElementById("car-form");
     if (h.style.display == "block") {
    h.style.display = "none";
     } else {
    console.log("trying to show/hide house form");   
   } 
-  let y = document.getElementById("car-column");
+  let y = document.getElementById("cars");
     if (y.style.display == "block") {
    y.style.display = "none";
     } else {
@@ -96,6 +102,12 @@ export default class HousesController {
     form.imgUrl.value = house.imgUrl;
     // @ts-ignore
     form._id.value = house._id;
+    { 
+      window.scrollTo(0, 140); 
+      console.log("trying to scroll to top");
+      
+      
+  } 
   }
 
   async updateHouse() {

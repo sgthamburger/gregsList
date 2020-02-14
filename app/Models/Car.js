@@ -11,8 +11,8 @@ export default class Car {
 
   get Template() {
     return /* html */ `
-    <div class="col-12 col-md-4 col-lg-3" style="max-width: 100%">
-        <div class="card" style="margin-top: 10px; margin-left: 20%;">
+    <div class="w-100 d-none d-sm-block d-md-none"><!-- wrap every 2 on sm--></div>
+        <div class="card mb-4">
             <img src="${this.imgUrl}" class="card-img-top" alt="a car image">
             <div class="card-body">
                 <div class="card-title">${this.make} - ${this.model}</div>

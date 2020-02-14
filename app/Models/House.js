@@ -12,9 +12,9 @@ export default class House {
 
   get houseTemplate() {
     return /* html */ `
-    <div class="col-12 col-md-4 col-lg-3" style="max-width: 100%">
-    <div class="card" style="margin-top: 10px">
-        <div class="card">
+    <div class="w-100 d-none d-sm-block d-md-none"><!-- wrap every 2 on sm--></div>
+        <div class="card mb-4">
+        
             <img src="${this.imgUrl}" class="card-img-top" alt="a house image">
             <div class="card-body">
                 <div class="card-title">Bedrooms: ${this.bedrooms} - Bathrooms: ${this.bathrooms}</div>

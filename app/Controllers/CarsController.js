@@ -28,9 +28,21 @@ export default class CarsController {
     } else {
    console.log("trying to show/hide car form");   
   } 
+  let b = document.getElementById("cars");
+    if (b.style.display == "none") {
+   b.style.display = "block";
+    } else {
+   console.log("trying to show/hide car");   
+  } 
   let h = document.getElementById("house-form");
     if (h.style.display == "block") {
    h.style.display = "none";
+    } else {
+   console.log("trying to show/hide house form");   
+  } 
+  let w = document.getElementById("houses");
+    if (w.style.display == "block") {
+   w.style.display = "none";
     } else {
    console.log("trying to show/hide house form");   
   } 
@@ -86,6 +98,10 @@ export default class CarsController {
     form.ImageURL.value = car.imgUrl;
     // @ts-ignore
     form._id.value = car._id;
+    { 
+      window.scrollTo(0, 140); 
+      console.log("trying to scroll to top");    
+      } 
   }
 
   async updateCar() {

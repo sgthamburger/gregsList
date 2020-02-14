@@ -12,15 +12,18 @@
     />
     <link rel="stylesheet" href="assets/style.css" />
     <title>Document</title>
-    <div><img src="/assets/header.jpg" alt="GregsList" style="width:50%" class="center"></div>
-
+    <div class="row" style="margin-bottom: 60px;"><img src="/assets/header.jpg" alt="GregsList" style="width:50%" class="center">
+    
+      <button style="height: 35%; margin-right: 10%;" class="btn btn-primary btn-lg" onclick="app.carsController.getCars()">Cars</button>
+      <button style="height: 35%; margin-right: 10%;" class="btn btn-primary btn-lg" onclick="app.housesController.getHouses()">Houses</button>
+    </div>
   </head>
   
   <body>
     <div class="container">
       <div class="row">
-      <div class="col" id="car-column" style="display: block">
-    <button class="btn btn-primary btn-lg" onclick="app.carsController.getCars()"><h2>Cars</h2></button>
+      <div class="container" id="car-column" style="display: block">
+    <!-- <button class="btn btn-primary btn-lg" onclick="app.carsController.getCars()"><h2>Cars</h2></button> -->
     <form style="display: none" id="car-form" onsubmit="app.carsController.createCar()">
       <input name="_id" type="text" class="d-none" disabled />
       <div class="form-group">
@@ -54,12 +57,12 @@
       <button class="btn btn-primary btn-lg" type="submit">Submit</button>
     </form>
   </div>
-    <div class="col">
-    <div id="cars" class="card-group" style="display:block; width: 100%;"></div>
+    <!-- <div class="col"> -->
+    <div id="cars" class="card-columns" style="display:block; width: 100%;"></div>
     <div class="container">
-    <div class="row">
-      <div class="col">
-    <button class="btn btn-primary btn-lg" onclick="app.housesController.getHouses()"><h2>Houses</h2></button>
+    <!-- <div class="row">
+      <div class="col"> -->
+    <!-- <button class="btn btn-primary btn-lg" onclick="app.housesController.getHouses()"><h2>Houses</h2></button> -->
     <form style="display: none" id="house-form" onsubmit="app.housesController.createHouse()">
       <input name="_id" type="text" class="d-none" disabled />
       <div class="form-group">
@@ -96,8 +99,8 @@
       </div>
       <button class="btn btn-primary btn-lg" type="submit">Submit</button>
     </form>
-    <div class="col">
-    <div id="houses" class="card-group" style="display:block; width: 100%;"></div>
+    <!-- <div class="col"> -->
+    <div id="houses" class="card-columns" style="display:block; width: 100%;"></div>
   </div>
 
     <script src="app/main.js" type="module"></script>
