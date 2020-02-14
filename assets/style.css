@@ -52,3 +52,16 @@
   width: 50%;
  }
 
+/* Float to the right on screens that are equal to or less than 768px wide */
+#headerPic (max-width: 768px) {
+  .float-left-sm {
+    float: right;
+  }
+}
+
+/* Float to the right on screens that are equal to or greater than 769px wide */
+#headerPic (min-width: 769px) {
+  .float-left-lg {
+    float: right;
+  }
+}
